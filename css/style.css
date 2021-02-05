@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+/* text-selection */
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: rgb(255, 51, 0);
+  }  
+::selection {
+    color: #fff;
+    background: rgb(255, 51, 0);
+}
+/*custom css */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(212,168,131,1) 0%, rgba(156,143,161,1) 100%);
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: fixed;
+    box-shadow: 0 0 10px 0;
+    backdrop-filter: blur(1.5px);
+}
+nav{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+nav .left{
+    width: 20%;
+}
+nav .right{
+    width: 80%;
+}
+nav .left h4{
+    float: left;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    margin: 0;
+}
+nav .right ul{
+    list-style: none;
+    display: flex;
+    float: right;
+    padding: 0;
+}
+.right ul a {
+    padding: 15px;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: monospace;
+}
+section{
+    padding: 70px 10px;
+    margin: 0;
+}
+section .container{
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .banner{
+    width: 100%;
+    height: 400px;
+    background: #fff;
+}
+.container .hr-top{
+    padding: 50px 0 0 0;
+}
+hr{
+    width: 500px;
+}
+.container .content{
+    width: 100%;
+}
+.container .content h3 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Playfair Display", Arial, serif;
+    padding: 15px 0px;
+    margin: 0;
+}
+.container .content .about-para {
+    color: #424242;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Roboto", Arial, sans-serif;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .content p {
+    font-size: 18px;
+    font-family: "Roboto", Arial, sans-serif;
+    width: 100%;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.content .pro-container{
+    width: 100%;
+    margin-top: 30px;
+}
+.content .pro-container .project {
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+}
+.content .pro-container .project .box {
+    width: 1250px;
+    height: 250px;
+    background: #fff;
+    padding: 0;
+    margin: 0px 40px;
+    border-radius: 15px;
+}
+.project .pro-content {
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+.project .pro-content hr{
+    margin: 0 0 20px 0;
+    width: 100%;
+    padding: 0;
+}
+.pro-content h5 {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+}
+.project .pro-content p {
+    font-size: 18px;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #fff;
+    text-align: justify;
+}
+.pro-content a {
+    text-decoration: none;
+    color: #fff;
+    background: #f36100;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 400;
+    line-height: 40px;
+    border-radius: 50px;
+}
+.pro-content .pro-launch{
+    width: 130px;
+}
+.pro-content .pro-launch i{
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+}
+.pro-content .pro-launch:hover i{
+    visibility: visible;
+    opacity: 1;
+}
+.pro-content .pro-launch:hover{
+    margin: 0 0 0 10px;
+    transition: .3s;
+}
+.content .btn{
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+a.btn-primary {
+    padding: 20px 50px;
+    width: 300px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    background: #333333;
+}
+a.btn-primary:hover{
+    color: #000;
+    background: rgb(233, 233, 233);
+}
+section .contact{
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
+section .contact .position{
+    margin: 30px auto 0 auto;
+    display: flex;
+    
+}
+section .contact .contact-form{
+    width: 50%;
+    margin: 15px 0 0 0;
+}
+.contact-form h4.danger {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+    background: rgb(228, 66, 66);
+    border-radius: 5px;
+}
+.contact-form h4.success {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+    background: rgb(66, 228, 79);
+    border-radius: 5px;
+}
+.contact-form .form-group{
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+.contact-form .form-group .control-form{
+    width: 95%;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contact-form .form-group .btn-send{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+}
+.contact-form .form-group .btn-send:hover{
+    color: #000;
+    background: rgb(233, 233, 233);
+}
+section .contact .social-links{
+    border-left: 1px solid rgba(253, 253, 253, 0.767);
+    padding: 0 0 0 100px;
+    margin-left: 100px;
+    width: 50%;
+}
+.social-links h4{
+    font-size: 24px;
+    font-weight: 900;
+    font-family: "Roboto", Arial, sans-serif;
+    padding: 15px 0 30px 0;
+    margin: 0;
+}
+.social-links ul{
+    width: 100%;
+    list-style: none;
+}
+.social-links ul li i{
+    font-size: 20px;
+    width: 40px;
+}
+.social-links ul li a{
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 30px;
+    text-decoration: none;
+}
+.social-links ul li a:hover{
+    color: #ffffff;
+    transition: .3s;
+}
+footer{
+    padding: 20px 0 50px 0;
+    width: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.05);
+}
+footer .copyright{
+    margin: 40px auto 0 auto;
+    width: 80%;
+    padding: 0 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 30px;
+    color: #000000;
+}
+footer .copyright:before{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 80%;
+    content: '';
+    margin: 0 auto 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+footer .copyright i{
+    color: rgb(255, 0, 0);
+}
+footer .copyright span{
+    margin-top: 20px;
+}
+footer .copyright span a{
+    color: #c9c9c9;
+    text-decoration: none;
+}
+footer .copyright span a:hover{
+    color: #ffffff;
+    transition: .3s;
+}
