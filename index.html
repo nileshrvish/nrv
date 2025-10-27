@@ -77,20 +77,20 @@
     <section class="education h-[300dvh] relative z-10 text-white py-[41px]">
       <div class="education-sticky-container sticky top-[41px] z-10 w-full">
         <div class="eduction-detail hidden min-[1025px]:flex min-[1025px]:flex-col absolute top-1/2 -translate-y-1/2 w-full overflow-hidden text-2xl">
-          <div class="wrapper invisible flex justify-between gap-10">
+          <div class="wrapper invisible flex items-center justify-between gap-10">
             <span class="lora text-5xl">MCA</span>
             <span class="inter">University of Mumbai</span>
           </div>
           <ul class="eduction-detail-list absolute w-full">
-            <li class="wrapper flex justify-between gap-10">
+            <li class="wrapper flex items-center justify-between gap-10">
               <span class="lora text-5xl">MCA</span>
               <span class="inter">University of Mumbai</span>
             </li>
-            <li class="wrapper flex justify-between gap-10">
+            <li class="wrapper flex items-center justify-between gap-10">
               <span class="lora text-5xl">BSc IT</span>
               <span class="inter">University of Mumbai</span>
             </li>
-            <li class="wrapper flex justify-between gap-10">
+            <li class="wrapper flex items-center justify-between gap-10">
               <span class="lora text-5xl">HSC</span>
               <span class="inter">Maharashtra Board</span>
             </li>
@@ -149,12 +149,24 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script> 
 
   <script>
     // use a script tag or an external JS file
     document.addEventListener("DOMContentLoaded", (event) => {
       gsap.registerPlugin(ScrollTrigger);
       const mm = gsap.matchMedia();
+
+      // Lenis smooth scroll
+      const lenis = new Lenis();
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
 
       // Logo signature animation
       const paths = document.querySelectorAll('.signature-svg path');
@@ -192,46 +204,113 @@
       });
       
       // Logo signature animation
-      const writingPaths = document.querySelectorAll('.svg-writing path');
+      // const writingPaths = document.querySelectorAll('.svg-writing path');
 
-      writingPaths.forEach((path, i) => {
-        const length = path.getTotalLength();
+      // writingPaths.forEach((path, i) => {
+      //   const length = path.getTotalLength();
 
-        // Initial setup
-        gsap.set(path, {
-          strokeDasharray: length,
-          strokeDashoffset: length,
-          fill: "transparent",
-          stroke: "#343434"
-        });
+      //   // Initial setup
+      //   gsap.set(path, {
+      //     strokeDasharray: length,
+      //     strokeDashoffset: length,
+      //     fill: "transparent",
+      //     stroke: "#343434"
+      //   });
 
-        // Scroll-triggered timeline
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".svg-writing",
-            start: "center center", // when SVG enters viewport
-            end: "bottom center+=150px",
-            toggleActions: "play none none reverse",
-            scrub: true
-          },
-          delay: i * 2
-        });
+      //   // Scroll-triggered timeline
+      //   const tl = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: ".svg-writing",
+      //       start: "center center", // when SVG enters viewport
+      //       end: "bottom center+=150px",
+      //       toggleActions: "play none none reverse",
+      //       scrub: true
+      //     },
+      //     delay: i * 2
+      //   });
 
-        tl.to(path, {
-          strokeDashoffset: 0,
-          duration: 5,
-          ease: "power4.inOut"
-        })
-        .to(path, {
-          fill: "#343434",
-          duration: 2,
-          ease: "power1.inOut"
-        })
-        .to(path, {
-          stroke: "transparent",
-          duration: 2,
-          ease: "power1.inOut"
-        }, "-=0.4");
+      //   tl.to(path, {
+      //     strokeDashoffset: 0,
+      //     duration: 5,
+      //     ease: "power4.inOut"
+      //   })
+      //   .to(path, {
+      //     fill: "#343434",
+      //     duration: 2,
+      //     ease: "power1.inOut"
+      //   })
+      //   .to(path, {
+      //     stroke: "transparent",
+      //     duration: 2,
+      //     ease: "power1.inOut"
+      //   }, "-=0.4");
+      // });
+
+
+      // Define breakpoints
+      mm.add(
+        {
+          isDesktop: "(min-width: 1025px)", // Desktop & tablets
+          isMobile: "(max-width: 1024px)",  // Mobile
+        },
+        (context) => {
+          const { isDesktop, isMobile } = context.conditions;
+
+          const writingPaths = document.querySelectorAll(".svg-writing path");
+
+          writingPaths.forEach((path, i) => {
+            const length = path.getTotalLength();
+
+            // Initial setup
+            gsap.set(path, {
+              strokeDasharray: length,
+              strokeDashoffset: length,
+              fill: "transparent",
+              stroke: "#343434",
+            });
+
+            // Scroll-triggered timeline
+            const tl = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".svg-writing",
+                start: isDesktop ? "top top+=300px" : "top top+=350px", // 👈 different start for desktop vs mobile
+                end: isDesktop ? "bottom center+=150px" : "bottom top+=300px",
+                toggleActions: "play none none reverse",
+                scrub: isDesktop ? 1.5 : 3,
+                markers: false, // enable to debug positions
+              },
+              delay: i * 0.9,
+            });
+
+            tl.to(path, {
+              strokeDashoffset: 0,
+              duration: 3,
+              ease: "sine.inOut",
+            })
+              .to(path, {
+                fill: "#343434",
+                duration: 1.5,
+                ease: "power1.inOut",
+              })
+              .to(
+                path,
+                {
+                  stroke: "transparent",
+                  duration: 1,
+                  ease: "power1.inOut",
+                },
+                "-=0.2"
+              );
+          });
+
+          // Refresh ScrollTrigger to recalc start/end
+          ScrollTrigger.refresh();
+        }
+      );
+
+      // Recalculate on resize or orientation change
+      window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
       });
 
       // Text reveal animation
