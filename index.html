@@ -203,50 +203,7 @@
         }, "-=0.4"); // overlap slightly for smooth blend
       });
       
-      // Logo signature animation
-      // const writingPaths = document.querySelectorAll('.svg-writing path');
-
-      // writingPaths.forEach((path, i) => {
-      //   const length = path.getTotalLength();
-
-      //   // Initial setup
-      //   gsap.set(path, {
-      //     strokeDasharray: length,
-      //     strokeDashoffset: length,
-      //     fill: "transparent",
-      //     stroke: "#343434"
-      //   });
-
-      //   // Scroll-triggered timeline
-      //   const tl = gsap.timeline({
-      //     scrollTrigger: {
-      //       trigger: ".svg-writing",
-      //       start: "center center", // when SVG enters viewport
-      //       end: "bottom center+=150px",
-      //       toggleActions: "play none none reverse",
-      //       scrub: true
-      //     },
-      //     delay: i * 2
-      //   });
-
-      //   tl.to(path, {
-      //     strokeDashoffset: 0,
-      //     duration: 5,
-      //     ease: "power4.inOut"
-      //   })
-      //   .to(path, {
-      //     fill: "#343434",
-      //     duration: 2,
-      //     ease: "power1.inOut"
-      //   })
-      //   .to(path, {
-      //     stroke: "transparent",
-      //     duration: 2,
-      //     ease: "power1.inOut"
-      //   }, "-=0.4");
-      // });
-
-
+      // Intro section animation
       // Define breakpoints
       mm.add(
         {
