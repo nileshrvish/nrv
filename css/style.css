@@ -1,0 +1,57 @@
+/* Font style */
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+/* Wrapper Style */
+.wrapper {
+  max-width: 1340px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  max-width: 110px;
+  width: 100%;
+  margin: 22px auto 0;
+}
+
+.svg-writing path,
+.signature-svg path {
+  stroke: #343434;
+  stroke-width: 1.5;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.full-width-wrapper {
+  width: 100%;
+}
+
+body {
+  color: #343434;
+}
+
+.media-container.on {
+  visibility: visible;
+}
+
+.active-org a {
+  padding: 40px 0;
+  color: #343434;
+}
+
+.active-org h3 {
+  font-size: 36px;
+}
