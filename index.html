@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-wrapper">
+      <a href="/" title="Nilesh R Vishwakarma">
+        <svg class="signature-svg" width="110" height="36" viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="letter-one" d="M39.3741 12.4009C39.6657 10.8484 39.8162 9.33149 39.9196 7.81204C40.0699 5.60054 39.6235 3.48626 38.7369 1.46418C38.5428 1.02155 38.547 0.690823 38.9429 0.360765C39.3472 0.0237352 39.7431 -0.0611947 40.2086 0.200864C40.8207 0.545449 41.1826 1.11809 41.5318 1.68536C42.1241 2.64739 42.6635 3.64169 43.2509 4.60686C43.4558 4.9435 43.7106 5.25998 43.9894 5.53937C44.3558 5.90661 44.7856 6.1492 45.3493 5.97004C45.6807 5.86467 45.9984 5.92166 46.1342 6.28318C46.2609 6.62036 46.1045 6.88644 45.8227 7.09471C45.2861 7.49132 44.7256 7.4885 44.1713 7.16808C43.5766 6.82436 43.0028 6.44483 42.4138 6.0771C42.264 6.27786 42.2928 6.49341 42.2954 6.69286C42.343 10.4223 41.4599 13.9835 40.3066 17.4898C39.2564 20.6825 37.9174 23.7428 35.9155 26.4758C35.1577 27.5103 34.3125 28.4624 33.2624 29.2211C31.2292 30.6901 28.3494 30.4306 26.4499 28.6449C24.8872 27.1757 23.9908 25.3256 23.3124 23.3528C22.1825 20.0671 21.7265 16.6607 21.5208 13.2065C21.4613 12.2075 21.4372 11.2079 21.3051 10.1773C21.1101 10.6664 20.9135 11.1548 20.7202 11.6446C19.1916 15.5192 17.5781 19.3554 15.5775 23.0181C14.1878 25.5625 12.6062 27.9779 10.6133 30.096C9.12955 31.6728 7.43864 32.9558 5.24603 33.4187C4.26312 33.6263 3.28755 33.604 2.32338 33.3436C1.07494 33.0064 -0.0179657 31.5887 0.00104267 30.363C0.0045339 30.1379 -0.0426178 29.8563 0.236492 29.7734C0.524755 29.6877 0.621799 29.9568 0.736906 30.1518C0.789924 30.2415 0.851422 30.3345 0.872409 30.4337C1.16857 31.8338 2.38554 32.2653 3.9488 32.2008C6.65996 32.0889 8.4925 30.4506 10.142 28.5433C13.2014 25.0059 15.2289 20.8856 16.858 16.5536C17.9254 13.7152 18.8389 10.8233 19.7165 7.92103C19.7693 7.74665 19.8115 7.56914 19.9081 7.20857C18.6509 8.27367 17.3235 8.81345 15.9184 9.18637C15.3717 9.33148 14.8247 9.48259 14.2557 9.50386C14.0123 9.51296 13.7082 9.55672 13.6415 9.22025C13.5708 8.86403 13.8521 8.73852 14.1232 8.67785C15.568 8.35447 16.8296 7.67167 17.9629 6.74321C19.2909 5.65517 20.4381 4.40431 21.1192 2.8124C21.432 2.08151 21.9561 1.81625 22.6736 1.76716C22.9035 1.75144 23.1353 1.755 23.3659 1.76187C24.3029 1.78979 24.4247 1.98936 24.26 2.91086C23.7989 5.49123 23.6582 8.08226 23.8457 10.7089C24.0678 13.819 24.4242 16.9039 25.1583 19.9332C25.7495 22.3727 26.3918 24.807 27.9268 26.878C28.7192 27.9473 29.719 28.6667 31.1229 28.4925C32.2404 28.3538 33.0788 27.6775 33.8097 26.8708C35.0215 25.5332 35.8525 23.9615 36.5448 22.3158C37.8798 19.142 38.7747 15.8407 39.3741 12.4009Z"/>
+          <path class="letter-two" d="M110.001 0.878632C108.57 0.862137 107.565 1.6301 106.626 2.58412C104.249 4.99743 102.281 7.73806 100.261 10.4352C97.2972 14.3913 94.2926 18.3153 91.0319 22.0341C88.7584 24.6271 86.2663 26.9877 83.2567 28.7345C82.8061 28.996 82.7683 29.3297 82.8626 29.7308C83.0457 30.5099 82.9083 31.2684 82.7688 32.0288C82.3565 34.2778 80.7098 35.2212 78.7207 35.7294C76.0917 36.401 73.6034 35.7261 71.1819 34.759C67.6673 33.3553 64.8839 30.9711 62.4452 28.1447C60.2087 25.5528 58.3773 22.6665 56.4015 19.8849C56.0902 19.4465 55.8045 18.9832 55.4118 18.6264C55.2105 18.6676 55.1551 18.8105 55.0878 18.938C54.1207 20.7701 53.1374 22.5943 52.3034 24.4924C52.0764 25.0088 51.8472 25.5306 51.8327 26.1082C51.8175 26.7159 52.1028 26.9006 52.6708 26.6601C53.0283 26.5087 53.2955 26.24 53.5454 25.9564C53.8639 25.595 54.1623 25.2157 54.4872 24.8602C54.6932 24.6347 54.9012 24.3797 55.2681 24.4397C55.4606 24.6998 55.2885 24.8966 55.1537 25.0663C54.3594 26.0663 53.7115 27.1709 52.8734 28.1423C52.0472 29.1 51.1215 29.035 49.976 28.4798C49.5311 28.2642 49.6135 27.8207 49.6849 27.4203C50.0228 25.5249 50.8266 23.7976 51.6435 22.0778C52.1798 20.9488 52.7506 19.836 53.333 18.6614C52.5803 18.297 51.5806 18.1123 52.0036 16.9712C52.3059 16.1557 53.0075 16.0043 54.5358 16.3673C55.4078 14.6619 56.7989 13.1042 57.0579 11.1808C57.4119 8.55246 59.1323 7.10227 60.9983 5.69284C62.2061 4.78059 63.5397 4.83048 64.8382 5.58962C65.352 5.89 65.6993 6.30309 65.6466 7.00585C63.4605 6.77552 62.2993 8.31255 61.0877 9.67185C59.1978 11.7923 57.7636 14.236 56.3391 16.6786C56.2673 16.8017 56.2234 16.9411 56.1652 17.0762C56.4156 17.3684 56.7416 17.3392 57.0475 17.3334C59.3281 17.2903 61.5369 16.7935 63.7177 16.1939C66.5599 15.4125 69.2973 14.3648 71.7492 12.6845C72.0562 12.4742 72.3954 12.2954 72.6441 11.9004C71.1171 11.0009 69.6947 10.0827 69.3598 8.08652C69.027 6.10281 69.7633 4.68075 71.2789 3.44434C70.3619 3.06099 69.4908 2.94726 68.628 2.86352C63.947 2.40916 59.3283 2.73801 54.8177 4.11874C52.3324 4.87952 49.9838 5.91717 48.1091 7.80421C47.205 8.71423 46.6607 9.80503 46.4677 11.0536C46.3199 12.0104 46.8105 12.7067 47.591 13.2006C47.9788 13.446 48.4116 13.6196 48.8169 13.8389C49.0736 13.9778 49.3296 14.1245 49.5618 14.2994C49.7072 14.409 49.8591 14.5777 49.7365 14.7822C49.6308 14.9587 49.4313 15.0104 49.2363 14.9545C48.895 14.8567 48.557 14.745 48.2233 14.6236C44.3433 13.2124 44.5304 8.86212 46.6272 6.63879C48.8344 4.29845 51.5117 2.70838 54.5872 1.7832C57.8669 0.796583 61.2284 0.360465 64.6454 0.542624C67.4366 0.691426 70.1925 1.10382 72.7608 2.31353C72.9848 2.41902 73.2 2.43443 73.4283 2.34412C76.0356 1.31307 78.7842 1.24051 81.5313 1.15757C81.6781 1.15314 81.8253 1.15499 81.9714 1.14332C82.0314 1.13853 82.0891 1.10561 82.1441 1.08678C82.1611 1.04161 82.1924 1.00104 82.1871 0.965947C82.1403 0.655644 81.8807 0.287444 82.3308 0.0900094C82.7625 -0.099394 83.1553 0.17261 83.2594 0.512253C83.5256 1.38093 84.1957 1.41545 84.9079 1.54365C85.9577 1.73263 87.0023 1.97936 87.9537 2.50148C88.3986 2.74566 88.8286 3.01025 89.1092 3.44564C89.362 3.8377 89.2247 4.09924 88.7577 4.09069C88.4904 4.08579 88.2213 4.00771 87.959 3.93974C86.7605 3.62916 85.5532 3.37972 84.3092 3.34675C83.9787 3.33799 83.7525 3.39687 83.7135 3.80369C83.4117 6.95284 82.4921 9.93537 81.2723 12.8424C79.8892 16.1388 78.4201 19.4062 77.4904 22.8711C77.1004 24.3246 76.8049 25.7994 76.9038 27.3236C76.98 28.497 77.6704 29.1082 78.839 29.0348C79.9638 28.9641 80.9356 28.4816 81.8924 27.9504C86.5038 25.3903 90.0591 21.7296 93.04 17.4393C95.3974 14.0463 97.327 10.3925 99.5985 6.95109C100.98 4.85729 102.383 2.74909 104.54 1.32433C105.65 0.59104 106.82 -0.0004595 108.21 2.67849e-07C108.841 0.000209059 109.413 0.135726 109.966 0.521547C110.001 0.643224 110.001 0.737387 110.001 0.878632ZM57.7978 18.2762C57.4955 18.3213 57.1666 18.2089 56.8903 18.4149C56.8591 18.6684 57.0396 18.8084 57.1656 18.9633C58.8043 20.9774 60.413 23.0173 62.1007 24.9899C64.1794 27.4195 66.4698 29.6369 69.2942 31.2056C71.9548 32.6833 74.7236 33.8589 77.8816 33.5237C79.0674 33.3979 80.1857 33.0548 81.0742 32.2003C81.8314 31.4722 82.0021 30.5818 81.8177 29.5926C81.5128 29.5533 81.3166 29.6956 81.1045 29.7741C79.4256 30.3948 77.7155 30.5245 75.9764 30.0794C74.8212 29.7837 74.0742 29.0554 73.7937 27.8903C73.4893 26.6258 73.7204 25.399 74.1207 24.1966C75.2913 20.6795 76.8728 17.3267 78.2757 13.9023C79.5278 10.8461 80.9416 7.85259 81.9034 4.683C82.0284 4.27095 82.1983 3.86184 82.1136 3.3471C79.8354 3.35103 77.6164 3.60477 75.4574 4.26044C75.4584 4.61809 75.6703 4.78569 75.7982 4.99337C76.5031 6.1375 76.8261 7.3552 76.5916 8.70389C76.1974 10.971 74.7894 12.5276 72.9824 13.7753C70.2649 15.6516 67.1699 16.6391 63.9989 17.4087C62.0006 17.8937 59.9491 18.0507 57.7978 18.2762ZM70.5 8.5341C70.4942 9.51565 71.0143 10.1738 71.808 10.6732C73.2743 11.5958 73.465 11.5627 74.4991 10.1662C75.7719 8.4475 75.7361 6.45524 74.4102 5.0647C74.2155 4.86049 74.0393 4.68304 73.7104 4.83995C72.1358 5.59112 70.6759 6.43601 70.5 8.5341Z"/>
+        </svg>   
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class="hero-banner my-[30px]">
+      <div class="wrapper">
+        <h1 class="inter text-[38px] leading-[42px] md:text-[98px] md:leading-[90px] lg:text-[134px] lg:leading-[110px] font-medium flex flex-col w-fit text-center block mx-auto pt-[122px] uppercase">
+          <span>Innovation</span>
+          <span>Through</span>
+          <div class="relative lora overflow-hidden">
+            <span class="invisible z-10 relative top-0 bg-white block">Imagination</span>
+            <div class="text-reveal absolute z-0 top-0 w-full h-full flex flex-col text-center block">
+              <span>Imagination</span>
+              <span>Creation</span>
+              <span>Design</span>
+              <span>Code</span>
+            </div>
+          </div>
+        </h1>
+      </div>
+    </section>
+    <div class="svg-writing bg-[#f5f5f5]">
+      <div class="wrapper py-[200px] min-[1025px]:py-[calc(60dvh-200px)] px-3 lg:px-[100px]">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 84">
+          <path d="M.9 29.4V1.8h6.7V13h10.9V2H25v27.5h-6.6v-11h-11v11zm38.1.4q-3.2 0-5.6-1.2-2.4-1.4-3.6-3.7t-1.3-5.7q0-3.2 1.3-5.7 1.2-2.4 3.6-3.7 2.3-1.4 5.4-1.4 2.2 0 4 .7a9 9 0 0 1 5.3 5.4q.8 2 .8 4.5v1.7h-18v-3.9h11.8q0-1-.5-1.8T41 13.7t-2-.5a4 4 0 0 0-3.3 1.8q-.5.9-.6 2v3.8q0 1.3.5 2.3t1.5 1.4 2.1.6l1.6-.3q.8-.2 1.3-.7t.7-1.1l6 .1a8 8 0 0 1-1.6 3.6q-1.3 1.5-3.3 2.3-2.1.9-4.8.8m19.8-28v27.6h-6.6V1.8zm10.8 0v27.6H63V1.8zm13.9 28q-3.2 0-5.6-1.3a9 9 0 0 1-3.6-3.8 12 12 0 0 1-1.3-5.6q0-3.1 1.3-5.6 1.2-2.4 3.6-3.7a11 11 0 0 1 5.6-1.4q3.3 0 5.6 1.4a9 9 0 0 1 3.6 3.7q1.2 2.4 1.3 5.6 0 3.2-1.3 5.6-1.2 2.5-3.6 3.8-2.3 1.3-5.6 1.3m0-5a3 3 0 0 0 2-.7q.9-.7 1.3-2t.5-3-.5-3q-.4-1.4-1.2-2a3 3 0 0 0-2-.8 3 3 0 0 0-2.1.8q-.9.6-1.3 2t-.5 3q0 1.7.5 3t1.3 2a3 3 0 0 0 2 .8m20.6.9-.1 1.5q-.2 1.8-.7 3.6a32 32 0 0 1-2 5.4h-4l1.2-5.4.4-3.6v-1.5zm18.2-23.9v27.6h-6.7V1.8zm8.2 0v10.8H126V1.8zm3.7 27.6V8.7h6.3v3.8h.2a6 6 0 0 1 5.9-4q2 0 3.7 1 1.4 1.2 2 3h.1a5 5 0 0 1 2.3-3 7 7 0 0 1 4-1q3 0 4.8 1.8a7 7 0 0 1 1.8 5.2v14h-6.6V17q0-1.5-.8-2.4t-2-.8q-1.5 0-2.2 1-.8.8-.8 2.3v12.3h-6.3V17q0-1.5-.8-2.2-.8-.9-2-.9a3 3 0 0 0-2.6 1.6 4 4 0 0 0-.4 1.8v12.2zm66.9-27.6v27.6h-5.7l-11-16h-.2v16h-6.7V1.8h5.8l10.9 16h.2v-16zm4.2 27.6V8.7h6.6v20.7zm3.3-23.1q-1.5 0-2.4-1a3 3 0 0 1-1-2.2q0-1.2 1-2.2.9-.9 2.4-.9 1.4 0 2.4 1 1 .8 1 2.1a3 3 0 0 1-1 2.3q-1 .9-2.4.9m14-4.5v27.6h-6.5V1.8zm14 28q-3.2 0-5.7-1.2-2.2-1.4-3.6-3.7-1.2-2.4-1.2-5.7 0-3.2 1.2-5.7 1.3-2.4 3.6-3.7t5.4-1.4q2.3 0 4.1.7a9 9 0 0 1 5.2 5.4q.8 2 .8 4.5v1.7h-18v-3.9h11.8q0-1-.4-1.8-.6-.9-1.4-1.3t-2-.5a4 4 0 0 0-3.3 1.8q-.5.9-.5 2v3.8q0 1.3.5 2.3t1.4 1.4 2.2.6l1.6-.3q.7-.2 1.2-.7l.8-1.1 6 .1a8 8 0 0 1-1.6 3.6q-1.3 1.5-3.4 2.3-2 .9-4.7.8M267.9 15l-6.1.2q0-.6-.5-1.1t-1.1-.8-1.5-.3a4 4 0 0 0-2 .4q-.8.4-.8 1.3 0 .6.5 1t1.8.7l4 .8q3 .5 4.6 2 1.6 1.3 1.6 3.6 0 2.1-1.3 3.7a8 8 0 0 1-3.4 2.5q-2 .8-5 .8-4.3 0-7-1.8a7 7 0 0 1-2.9-4.9l6.6-.2q.2 1.2 1 1.8 1 .6 2.4.6a4 4 0 0 0 2-.5q.9-.4.9-1.3 0-.6-.7-1a5 5 0 0 0-1.9-.8l-3.6-.6q-3-.6-4.6-2.1t-1.5-4q0-2 1-3.5a7 7 0 0 1 3.3-2.3q2-.8 4.8-.8 4.2 0 6.7 1.8a6 6 0 0 1 2.7 4.8m10.3 2.6v11.8h-6.6V1.8h6.4v10.7h.2a6 6 0 0 1 2.3-3q1.5-1 4-1 2.1 0 3.8 1 1.5 1 2.5 2.6.9 1.8.9 4.1v13.2H285V17.5q0-1.7-1-2.7-.7-1-2.4-1-1 0-1.8.5t-1.2 1.3q-.5.8-.5 2M0 53.2v-5.4h23.4v5.4H15v22.2H8.4V53.2zm37.2 13.3V54.7h6.6v20.7h-6.3v-3.8h-.2a6 6 0 0 1-2.4 3 7 7 0 0 1-4 1.1 7 7 0 0 1-6.2-3.7 9 9 0 0 1-.9-4V54.6h6.6v12q0 1.6.9 2.6a3 3 0 0 0 2.4 1q1 0 1.7-.5.9-.4 1.3-1.3t.5-2m10.8 9V54.6h6.4v3.8h.2q.6-2.1 1.8-3 1.3-1 3-1l1.9.2v5.7l-1.3-.2-1.3-.1q-1.2 0-2.1.5T55 62t-.5 2.2v11.2zm22.6-11.9v11.8H64V54.7h6.2v3.8h.3a6 6 0 0 1 2.3-3 7 7 0 0 1 4-1q2.1 0 3.8 1t2.5 2.7.9 4v13.2h-6.6V63.5q0-1.7-1-2.7-.7-1-2.4-1-1 0-1.8.5a3 3 0 0 0-1.2 1.3q-.4.9-.4 2M88 75.4V54.7h6.6v20.7zm3.3-23.1q-1.4 0-2.3-1a3 3 0 0 1-1-2.2q0-1.2 1-2.2 1-.9 2.3-.9 1.5 0 2.4 1 1 .8 1 2.1a3 3 0 0 1-1 2.3q-.9.9-2.4.9m14.1 11.3v11.8h-6.6V54.7h6.3v3.8h.2a6 6 0 0 1 2.4-3 7 7 0 0 1 4-1q2.2 0 3.7 1 1.7.9 2.5 2.7 1 1.7 1 4v13.2h-6.7V63.5q0-1.7-.8-2.7t-2.5-1q-1 0-1.8.5a3 3 0 0 0-1.2 1.3q-.5.9-.5 2m27.2 20q-3 0-5-.8a8 8 0 0 1-3.4-2.2q-1.2-1.4-1.4-3.3l6.2-.3q.2.7.7 1 .5.6 1.2.8l1.9.3q1.6 0 2.7-.8 1-.9 1-2.8v-3.7h-.1a5 5 0 0 1-1.2 1.7q-.8.8-2 1.2-1.2.5-2.7.5-2.3 0-4.2-1a8 8 0 0 1-3-3.4q-1-2.3-1-5.7 0-3.7 1-6a8 8 0 0 1 3.1-3.5 8 8 0 0 1 6.9-.6q1.1.6 1.9 1.4.8.9 1.1 1.9h.2v-3.6h6.6v20.8q0 2.7-1.3 4.5a8 8 0 0 1-3.7 2.7q-2.4 1-5.5 1m.2-13.2q1.2 0 2-.7t1.3-1.8.5-2.8-.5-3a4 4 0 0 0-1.3-1.8q-.8-.7-2-.7t-2 .7q-1 .6-1.4 1.9-.4 1.1-.4 2.9 0 1.6.4 2.8a4 4 0 0 0 1.3 1.8q1 .7 2 .7M162 47.8v27.6h-6.6V47.8zm11.8 28a8 8 0 0 1-7.2-4.8q-1-2.4-1-6 0-3.4 1-6a8 8 0 0 1 3.1-3.4 8 8 0 0 1 6.9-.6q1.1.6 1.9 1.4.8.9 1.1 1.9h.2V47.8h6.6v27.6h-6.6v-3.3h-.2q-.3.9-1.1 1.8t-2 1.3-2.7.5m2.3-5.2q1.2 0 2-.7t1.4-1.9.4-3q0-1.5-.4-2.8a4 4 0 0 0-1.3-2q-.9-.6-2.1-.6t-2 .7q-.8.6-1.4 1.9-.4 1.2-.4 2.9t.4 2.9 1.3 2q.9.6 2.1.6m24.1 5.2q-3.2 0-5.6-1.2-2.3-1.4-3.6-3.7-1.2-2.4-1.3-5.7 0-3.2 1.3-5.7 1.3-2.4 3.6-3.7t5.4-1.4q2.3 0 4 .7a9 9 0 0 1 5.3 5.4q.8 2 .8 4.5v1.7h-18v-3.9H204q0-1-.5-1.8t-1.3-1.3-2-.5A4 4 0 0 0 197 61q-.5.9-.5 2v3.8q0 1.3.5 2.3t1.4 1.4 2.2.6l1.5-.3q.8-.2 1.3-.7t.7-1.1l6.1.1a8 8 0 0 1-1.7 3.6q-1.3 1.5-3.3 2.3-2.1.8-4.8.8m19 0q-1.8 0-3.4-.7t-2.5-2-.8-3.4q0-1.7.6-3 .6-1.1 1.7-1.8 1-.8 2.4-1.2l3-.5 2.8-.3 1.6-.6q.5-.3.5-1a2 2 0 0 0-.7-1.6 3 3 0 0 0-2-.6q-1.2 0-2 .6-1 .6-1 1.5l-6.2-.2a7 7 0 0 1 4.5-5.7q2.1-.9 4.8-.9 2 0 3.7.5a9 9 0 0 1 2.9 1.4 6 6 0 0 1 2.6 5v14.1h-6.2v-2.8h-.2a6 6 0 0 1-3.4 2.8q-1.2.4-2.6.4m2.1-4.3q1 0 2-.5.8-.3 1.3-1.1t.5-1.8v-2l-.7.3-1.8.4-2.5.6q-.7.3-1 .8a2 2 0 0 0-.4 1.2q0 1 .7 1.5.8.6 2 .6M254 61l-6 .2q-.2-.6-.6-1.1t-1-.8-1.6-.3a4 4 0 0 0-2 .4q-.7.4-.7 1.3 0 .6.4 1 .6.5 1.9.7l4 .8q3 .6 4.6 2t1.5 3.6-1.3 3.7a8 8 0 0 1-3.4 2.5q-2 .8-4.9.8-4.5 0-7-1.8a7 7 0 0 1-3-4.9l6.6-.2q.2 1.2 1.1 1.8t2.3.6a4 4 0 0 0 2.1-.5q.8-.4.8-1.3 0-.7-.6-1a5 5 0 0 0-2-.8l-3.5-.6q-3.2-.6-4.7-2.1t-1.5-4q0-2 1.1-3.5a7 7 0 0 1 3.2-2.3q2-.8 4.9-.8 4.2 0 6.6 1.8A6 6 0 0 1 254 61m12 14.4V54.7h6.5v20.7zm3.2-23.1q-1.3 0-2.4-1a3 3 0 0 1-1-2.2q0-1.2 1-2.2 1-.9 2.4-.9 1.5 0 2.4 1 1 .8 1 2.1a3 3 0 0 1-1 2.3q-.9.9-2.4.9m14.1 11.3v11.8h-6.6V54.7h6.3v3.8h.2a6 6 0 0 1 2.4-3 7 7 0 0 1 4-1q2.1 0 3.7 1t2.5 2.7 1 4v13.2H290V63.5q0-1.7-.9-2.7-.7-1-2.4-1-1 0-1.8.5a3 3 0 0 0-1.2 1.3q-.5.9-.5 2m29.2-8.9v4.9h-13v-4.9zm-10.3-5h6.6V69q0 .7.2 1t.5.5l1 .2 1.4-.2 1 4.7-3.4.6q-2.3.2-4-.5-1.5-.6-2.5-2t-.8-3.5zm23.1 26.1q-3.2 0-5.6-1.3a9 9 0 0 1-3.6-3.8 12 12 0 0 1-1.2-5.6q0-3.1 1.2-5.6 1.3-2.4 3.6-3.7a11 11 0 0 1 5.6-1.4q3.3 0 5.6 1.4a9 9 0 0 1 3.6 3.7q1.3 2.4 1.3 5.6 0 3.3-1.3 5.6-1.2 2.5-3.6 3.8-2.3 1.3-5.6 1.3m0-5a3 3 0 0 0 2-.7q.9-.7 1.3-2t.5-3-.5-3q-.4-1.4-1.2-2a3 3 0 0 0-2-.8 3 3 0 0 0-2.1.8q-.9.6-1.3 2t-.4 3 .4 3 1.3 2a3 3 0 0 0 2 .8m22 4.6V47.8h11.5q3 0 5.3 1.1a8 8 0 0 1 3.5 3.2q1.2 2 1.2 5a8 8 0 0 1-4.8 8q-2.2.8-5.4.9h-7.3v-5.3h6a7 7 0 0 0 2.5-.4q1-.3 1.6-1.2.5-.8.5-2a4 4 0 0 0-.5-2.2q-.6-.9-1.6-1.3t-2.5-.4H354v22.2zm15.6-12.6 6.9 12.6h-7.3l-6.7-12.6zm18.9 13q-3.2 0-5.6-1.2-2.4-1.4-3.6-3.7t-1.3-5.7q0-3.2 1.3-5.7 1.2-2.4 3.5-3.7 2.4-1.4 5.5-1.4 2.2 0 4 .7a9 9 0 0 1 5.3 5.4q.7 2 .7 4.5v1.7h-18v-3.9h11.9q0-1-.5-1.8t-1.4-1.3-1.9-.5a4 4 0 0 0-3.4 1.8q-.5.9-.5 2v3.8q0 1.3.5 2.3t1.4 1.4 2.2.6l1.6-.3q.7-.2 1.2-.7t.8-1.1l6 .1a8 8 0 0 1-1.6 3.6q-1.3 1.5-3.3 2.3-2.1.8-4.8.8m19 0q-2 0-3.5-.7t-2.4-2-.9-3.4q0-1.7.6-3 .6-1.1 1.7-1.8 1-.8 2.5-1.2l3-.5 2.8-.3 1.5-.6q.6-.3.5-1a2 2 0 0 0-.7-1.6 3 3 0 0 0-2-.6q-1.2 0-2 .6t-1 1.5l-6.1-.2a7 7 0 0 1 4.5-5.7q2-.9 4.7-.9 2 0 3.7.5a9 9 0 0 1 3 1.4 6 6 0 0 1 2.5 5v14.1H407v-2.8h-.1a6 6 0 0 1-3.5 2.8q-1 .4-2.6.4m2-4.3q1.1 0 2-.5.9-.3 1.4-1.1t.5-1.8v-2l-.7.3-1.8.4-2.6.6q-.6.3-1 .8l-.3 1.2q0 1 .7 1.5t1.9.6m21-23.7v27.6h-6.5V47.8zm4.3 27.6V54.7h6.6v20.7zm3.3-23.1q-1.5 0-2.4-1a3 3 0 0 1-1-2.2q0-1.2 1-2.2.9-.9 2.4-.9 1.4 0 2.4 1 1 .8 1 2.1a3 3 0 0 1-1 2.3q-1 .9-2.4.9m19.2 2.4v4.9h-13.1v-4.9zm-10.4-5h6.6V69q0 .7.2 1 .1.4.6.5l.9.2 1.4-.2 1 4.7-3.3.6q-2.4.2-4-.5t-2.5-2-.9-3.5zM458 83.3a13 13 0 0 1-4-.6l1.4-4.8 1.7.3q.9 0 1.4-.2.6-.3.9-1l.2-.7-7.3-21.5h6.9l3.8 14.8h.2l3.9-14.8h7L466 77.4q-.6 1.8-1.6 3a7 7 0 0 1-2.6 2q-1.7.8-4 .8"/>
+        </svg>
+      </div>        
+    </div>
+    <section class="experience relative pt-0 pb-[250px] min-[1025px]:py-[250px]">
+      <div class="wrapper gap-y-[150px] min-[1025px]:gap-x-10 flex flex-col min-[1025px]:grid-rows-[auto] min-[1025px]:auto-cols-fr min-[1025px]:grid-cols-12 min-[1025px]:grid items-center !mb-[90px]">
+        <div class="min-[1025px]:col-[auto_/_span_7] flex -mt-[80px] min-[1025px]:mt-0 min-[1025px]:justify-end">
+          <div class="sticky-org-container pointer-events-none">
+            <figure class="sticky-org-image max-w-[240px] w-full rounded-lg overflow-hidden">
+              <img src="./assets/images/nrv.jpg" alt="Nilesh Vishwakarma">
+              <div class="media-container invisible w-full bg-white h-full absolute overflow-clip inset-[0%]"></div>
+            </figure>
+          </div>
+        </div>
+        <h2 class="lora col-[auto_/_span_5] text-[28px] md:text-[34px] leading-[32px] md:leading-[44px] basis-[40%]">WordPress & JavaScript Engineer crafting fast, animated, and user-friendly websites. Passionate about performance, UX, and pixel-perfect web experiences.</h2>
+      </div>
+      <ul class="organisations text-[#343434]/50">
+        <li class="org-list border-t border-black/30">
+          <a href="https://axioned.com/" title="Axioned" data-img-src="./assets/images/axioned.jpg" target="_blank" rel="nofollow noopener" class="group wrapper flex justify-between gap-3 min-[1025px]:gap-[100px] flex-col md:flex-row items-center py-[18px] duration-300 hover:py-[40px] hover:text-[#343434]">
+            <h3 class="lora text-[28px] duration-300 group-hover:text-[36px]">Axioned</h3>
+            <span class="inter text-[20px] font-medium">Software Engineer</span>
+          </a>
+        </li>
+        <li class="org-list border-t border-black/30">
+          <a href="https://www.here.com/" title="HERE Technologies" data-img-src="./assets/images/here.jpg" target="_blank" rel="nofollow noopener" class="group wrapper flex justify-between gap-3 min-[1025px]:gap-[100px] flex-col md:flex-row items-center py-[18px] duration-300 hover:py-[40px] hover:text-[#343434]">
+            <h3 class="lora text-[28px] duration-300 group-hover:text-[36px]">HERE Technologies</h3>
+            <span class="inter text-[20px] font-medium">Spatial Data Specialist</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="education h-[300dvh] relative z-10 text-white py-[41px]">
+      <div class="education-sticky-container sticky top-[41px] z-10 w-full">
+        <div class="eduction-detail hidden min-[1025px]:flex min-[1025px]:flex-col absolute top-1/2 -translate-y-1/2 w-full overflow-hidden text-2xl">
+          <div class="wrapper invisible flex justify-between gap-10">
+            <span class="lora text-5xl">MCA</span>
+            <span class="inter">University of Mumbai</span>
+          </div>
+          <ul class="eduction-detail-list absolute w-full">
+            <li class="wrapper flex justify-between gap-10">
+              <span class="lora text-5xl">MCA</span>
+              <span class="inter">University of Mumbai</span>
+            </li>
+            <li class="wrapper flex justify-between gap-10">
+              <span class="lora text-5xl">BSc IT</span>
+              <span class="inter">University of Mumbai</span>
+            </li>
+            <li class="wrapper flex justify-between gap-10">
+              <span class="lora text-5xl">HSC</span>
+              <span class="inter">Maharashtra Board</span>
+            </li>
+          </ul>
+        </div>
+        <div class="max-w-[375px] w-[90%] md:w-full max-h-[90dvh] mx-auto text-center bg-[#343434] rounded-xl py-4 px-4 overflow-hidden">
+          <h2 class="lora text-[34px] leading-[44px]">Education</h2>
+          <ul class="education-img-container pb-[calc(50vh-106px)] pt-[calc(50vh-226px)] h-full flex flex-col gap-4">
+            <li class="education-img-list rounded-lg overflow-hidden" data-bg="education-img-1">
+              <figure class="relative">
+                <img src="./assets/images/Student writing notes in golden sunlight.jpg" alt="Student writing notes in golden sunlight">
+                <figcaption class="flex flex-col min-[1025px]:hidden absolute top-0 w-full h-full justify-center bg-black/40">
+                  <span class="lora text-2xl">MCA</span>
+                  <span class="inter">University of Mumbai</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="education-img-list rounded-lg overflow-hidden" data-bg="education-img-2">
+              <figure class="relative">
+                <img src="./assets/images/Focused man working in computer lab.jpg" alt="Focused man working in computer lab">
+                <figcaption class="flex flex-col min-[1025px]:hidden absolute top-0 w-full h-full justify-center bg-black/40">
+                  <span class="lora text-2xl">BSc IT</span>
+                  <span class="inter">University of Mumbai</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="education-img-list rounded-lg overflow-hidden" data-bg="education-img-3">
+              <figure class="relative">
+                <img src="./assets/images/Graduate student programming on laptop.jpg" alt="Graduate student programming on laptop">
+                <figcaption class="flex flex-col min-[1025px]:hidden absolute top-0 w-full h-full justify-center bg-black/40">
+                  <span class="lora text-2xl">HSC</span>
+                  <span class="inter">Maharashtra Board</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sticky-background absolute top-0 w-full h-[300dvh]">
+        <ul class="education-container sticky top-0 h-dvh">
+          <li class="education-list absolute h-full top-0 w-full [clip-path:inset(0)]" id="education-img-1">
+            <img src="./assets/images/Student writing notes in golden sunlight.jpg" class="object-cover w-full h-full" alt="Student writing notes in golden sunlight">
+          </li>
+          <li class="education-list absolute h-full top-0 w-full [clip-path:inset(0)]" id="education-img-2">
+            <img src="./assets/images/Focused man working in computer lab.jpg" class="object-cover w-full h-full" alt="Focused man working in computer lab">
+          </li>
+          <li class="education-list absolute h-full top-0 w-full [clip-path:inset(0)]" id="education-img-3">
+            <img src="./assets/images/Graduate student programming on laptop.jpg" class="object-cover w-full h-full" alt="Graduate student programming on laptop">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    // use a script tag or an external JS file
+    document.addEventListener("DOMContentLoaded", (event) => {
+      gsap.registerPlugin(ScrollTrigger);
+      const mm = gsap.matchMedia();
+
+      // Logo signature animation
+      const paths = document.querySelectorAll('.signature-svg path');
+
+      // Animate each path like handwriting
+      paths.forEach((path, i) => {
+        const length = path.getTotalLength();
+
+        // Initial setup
+        gsap.set(path, {
+          strokeDasharray: length,
+          strokeDashoffset: length,
+          fill: "transparent",
+          stroke: "#343434"
+        });
+
+        // Create timeline for each path
+        const tl = gsap.timeline({ delay: i * 0.5 });
+
+        tl.to(path, {
+          strokeDashoffset: 0,
+          duration: 2,
+          ease: "power2.inOut"
+        })
+        .to(path, {
+          fill: "#343434",
+          duration: 0.8,
+          ease: "power1.inOut"
+        })
+        .to(path, {
+          stroke: "transparent",
+          duration: 0.8,
+          ease: "power1.inOut"
+        }, "-=0.4"); // overlap slightly for smooth blend
+      });
+      
+      // Logo signature animation
+      const writingPaths = document.querySelectorAll('.svg-writing path');
+
+      writingPaths.forEach((path, i) => {
+        const length = path.getTotalLength();
+
+        // Initial setup
+        gsap.set(path, {
+          strokeDasharray: length,
+          strokeDashoffset: length,
+          fill: "transparent",
+          stroke: "#343434"
+        });
+
+        // Scroll-triggered timeline
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".svg-writing",
+            start: "center center", // when SVG enters viewport
+            end: "bottom center+=150px",
+            toggleActions: "play none none reverse",
+            scrub: true
+          },
+          delay: i * 2
+        });
+
+        tl.to(path, {
+          strokeDashoffset: 0,
+          duration: 5,
+          ease: "power4.inOut"
+        })
+        .to(path, {
+          fill: "#343434",
+          duration: 2,
+          ease: "power1.inOut"
+        })
+        .to(path, {
+          stroke: "transparent",
+          duration: 2,
+          ease: "power1.inOut"
+        }, "-=0.4");
+      });
+
+      // Text reveal animation
+      gsap.to(".text-reveal", {
+        scrollTrigger: {
+          trigger: ".hero-banner", // element that triggers the animation
+          start: "top 88",       // when the top of container hits top of viewport
+          end: "bottom-=150 top",      // when bottom of container hits top of viewport
+          scrub: true             // smooth scrubbing, ties animation to scroll
+        },
+        top: "-300%",             // final position
+        ease: "none"              // linear movement
+      });
+
+      gsap.to(".eduction-detail-list", {
+        scrollTrigger: {
+          trigger: ".sticky-background", // element that triggers the animation
+          start: "top top",       // when the top of container hits top of viewport
+          end: "bottom bottom",      // when bottom of container hits top of viewport
+          scrub: true             // smooth scrubbing, ties animation to scroll
+        },
+        top: "-200%",             // final position
+        ease: "none"              // linear movement
+      });
+
+      if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        console.error("GSAP and ScrollTrigger are required before this script.");
+        return;
+      }
+
+      // reuse global mm if present, otherwise create one for this scope
+      const mmInstance =
+        typeof mm !== "undefined"
+          ? mm
+          : typeof gsap.matchMedia === "function"
+          ? gsap.matchMedia()
+          : null;
+
+      if (!mmInstance) {
+        console.warn("gsap.matchMedia() not available; media-specific behavior will still attempt to run.");
+      }
+
+      // iterate once through each .experience section and initialize both image-switch & pin behavior
+      document.querySelectorAll(".experience").forEach((sectionEl) => {
+        // DOM references (scoped to this section)
+        const orgListEl = sectionEl.querySelector(".organisations");
+        const orgItems = orgListEl ? Array.from(orgListEl.querySelectorAll(".org-list")) : [];
+        const mediaContainerEl =
+          sectionEl.querySelector(".media-container") ||
+          sectionEl.querySelector(".sticky-org-container .media-container") ||
+          null;
+        const mediaAnchors = orgListEl ? Array.from(orgListEl.querySelectorAll("a")) : [];
+
+        // pin element for scroll pinning behavior
+        const pinContainerEl = sectionEl.querySelector(".sticky-org-container") || null;
+
+        // defensive checks
+        if (!orgListEl || !mediaContainerEl) {
+          console.warn("Missing required elements (.organisations or .media-container) for section:", sectionEl);
+          // still attempt to create pin behavior if pinContainerEl exists
+        }
+
+        // helper: create and append a media image for a given index
+        let lastCreatedIndex = -1; // prevents creating duplicates in quick succession
+        function createMedia(index) {
+          if (!mediaAnchors[index]) {
+            console.warn("createMedia: index out of range", index);
+            return;
+          }
+          if (index === lastCreatedIndex) return; // already shown
+          lastCreatedIndex = index;
+
+          const src = mediaAnchors[index].getAttribute("data-img-src") || mediaAnchors[index].getAttribute("href");
+          if (!src) {
+            console.warn("Media anchor missing data-img-src / href at index", index);
+            return;
+          }
+
+          const wrapper = document.createElement("div");
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = mediaAnchors[index].getAttribute("data-alt") || "";
+
+          wrapper.appendChild(img);
+          mediaContainerEl.innerHTML = "";
+          mediaContainerEl.appendChild(wrapper);
+
+          // animate in if GSAP available
+          if (typeof gsap !== "undefined") {
+            gsap.fromTo([wrapper, img], { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.32, ease: "power3.out" });
+          }
+
+          // keep only last 20 children
+          while (mediaContainerEl.children.length > 20) {
+            mediaContainerEl.removeChild(mediaContainerEl.firstElementChild);
+          }
+        }
+
+        // --- Desktop behavior (hover) ---
+        const desktopSetup = () => {
+          if (!orgListEl) return;
+
+          // store handlers so cleanup can remove them
+          const handlers = {
+            onListEnter: () => mediaContainerEl.classList.add("on"),
+            onListLeave: () => {
+              mediaContainerEl.classList.remove("on");
+              mediaContainerEl.innerHTML = "";
+              lastCreatedIndex = -1;
+            },
+            itemHandlers: [],
+          };
+
+          orgListEl.addEventListener("mouseenter", handlers.onListEnter);
+          orgListEl.addEventListener("mouseleave", handlers.onListLeave);
+
+          orgItems.forEach((item, idx) => {
+            const handler = () => {
+              if (idx < mediaAnchors.length) createMedia(idx);
+            };
+            handlers.itemHandlers.push({ item, handler });
+            item.addEventListener("mouseenter", handler);
+          });
+
+          // return teardown to be used by matchMedia revert
+          return () => {
+            orgListEl.removeEventListener("mouseenter", handlers.onListEnter);
+            orgListEl.removeEventListener("mouseleave", handlers.onListLeave);
+            handlers.itemHandlers.forEach(({ item, handler }) => item.removeEventListener("mouseenter", handler));
+          };
+        };
+
+        // --- Mobile behavior (scroll-driven) ---
+        const mobileSetup = () => {
+          if (!orgListEl) return;
+
+          // mediaContainerEl.classList.add("on");
+
+          const triggers = [];
+
+          orgItems.forEach((item, idx) => {
+            const t = ScrollTrigger.create({
+              trigger: item,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                if (idx < mediaAnchors.length) createMedia(idx);
+                item.classList.add('active-org');
+              },
+              onEnterBack: () => {
+                if (idx < mediaAnchors.length) createMedia(idx);
+                item.classList.add('active-org');
+              },
+              onLeaveBack: () => {
+                item.classList.remove('active-org');
+              },
+              onLeave: () => {
+                item.classList.remove('active-org');
+              },
+            });
+            triggers.push(t);
+          });
+
+          const listTrigger = ScrollTrigger.create({
+            trigger: orgListEl,
+            start: "top center",
+            end: "bottom top",
+            onEnter: () => {
+              mediaContainerEl.classList.add("on");
+              sectionEl.classList.add("on");
+            },
+            onEnterBack: () => {
+              mediaContainerEl.classList.add("on");
+              sectionEl.classList.add("on");
+            },
+            onLeaveBack: () => {
+              mediaContainerEl.classList.remove("on");
+              sectionEl.classList.remove("on");
+              // mediaContainerEl.innerHTML = "";
+              lastCreatedIndex = -1;
+            },
+            onLeave: () => {
+              mediaContainerEl.classList.remove("on");
+              sectionEl.classList.remove("on");
+              // mediaContainerEl.innerHTML = "";
+              lastCreatedIndex = -1;
+            },
+          });
+
+          triggers.push(listTrigger);
+
+          // return a teardown function that kills created ScrollTriggers
+          return () => triggers.forEach((t) => t && t.kill && t.kill());
+        };
+
+        // Attach the behaviors via matchMedia if available, else attach both (best-effort)
+        if (mmInstance && typeof mmInstance.add === "function") {
+          // desktop
+          mmInstance.add("(min-width: 1025px) and (pointer: fine)", desktopSetup);
+          // mobile
+          mmInstance.add("(max-width: 1024px) and (pointer: coarse)", mobileSetup);
+        } else {
+          // fallback: run both so the functionality at least exists without mm
+          const desktopTeardown = desktopSetup();
+          const mobileTeardown = mobileSetup();
+          // no robust reverts without mm, but keep references if needed later
+          sectionEl._desktopTeardown = desktopTeardown;
+          sectionEl._mobileTeardown = mobileTeardown;
+        }
+
+        // --- Pinning behavior (GSAP ScrollTrigger) ---
+        if (pinContainerEl) {
+          // Desktop pin
+          if (mmInstance && typeof mmInstance.add === "function") {
+            mmInstance.add("(min-width: 1025px) and (pointer: fine)", () => {
+              const tl = gsap.timeline({
+                defaults: { ease: "none" },
+                scrollTrigger: {
+                  trigger: pinContainerEl,
+                  start: "center center",
+                  end: "bottom top",
+                  endTrigger: sectionEl,
+                  pin: true,
+                  scrub: true,
+                },
+              });
+              return () => {
+                if (tl.scrollTrigger) tl.scrollTrigger.kill();
+                tl.kill();
+              };
+            });
+
+            // Mobile pin
+            mmInstance.add("(max-width: 1024px) and (pointer: coarse)", () => {
+              const tl = gsap.timeline({
+                defaults: { ease: "none" },
+                scrollTrigger: {
+                  trigger: pinContainerEl,
+                  start: "top center-=280px",
+                  end: "bottom top",
+                  endTrigger: sectionEl,
+                  pin: pinContainerEl,
+                  scrub: true,
+                },
+              });
+              return () => {
+                if (tl.scrollTrigger) tl.scrollTrigger.kill();
+                tl.kill();
+              };
+            });
+          } else {
+            // fallback: create pin timelines unconditionally
+            gsap.timeline({
+              defaults: { ease: "none" },
+              scrollTrigger: {
+                trigger: pinContainerEl,
+                start: "center center",
+                end: "bottom top",
+                endTrigger: sectionEl,
+                pin: true,
+                scrub: true,
+              },
+            });
+          }
+        }
+      }); // end forEach(section)
+
+      // Get all elements
+      const section = document.querySelector('.education');
+      const backgroundContainer = document.querySelector('.education-container');
+      const filmstripContainer = document.querySelector('.education-sticky-container');
+      const filmstripContent = document.querySelector('.education-img-container');
+      const filmstripContentHeading = document.querySelector('.education-sticky-container h2');
+
+      if (!section || !backgroundContainer || !filmstripContainer || !filmstripContent) {
+        console.error('Required elements not found');
+        return;
+      }
+
+      // Get all background and filmstrip items
+      const filmstripItems = gsap.utils.toArray('.education-img-list');
+
+      // Main filmstrip scroll animation
+      // This scrolls the content inside the fixed container
+      const containerAnimation = gsap.to([filmstripContent, filmstripContentHeading], {
+        y: () => -(filmstripContent.scrollHeight - filmstripContainer.clientHeight),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1,
+          invalidateOnRefresh: true,
+        }
+      });
+
+      // Background reveal animations
+      // Start from index 1 (skip first background as it's already visible)
+      const imageContainer = document.querySelectorAll('.education-list, .eduction-detail li');
+
+      imageContainer.forEach((image, idx) => {
+        image.style.zIndex = imageContainer.length - idx;
+      });
+
+      gsap.set('.education-list', {
+        clipPath: function () {
+          return "inset(0px 0px 0px 0px)"
+        }
+      });
+
+      gsap.to('.education-list:not(:last-child)', {
+        clipPath: function () {
+          return "inset(0px 0px 100% 0px)"
+        },
+        stagger: .5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: '.sticky-background',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1
+        }
+      });
+
+      gsap.set('.education-list img', {
+        y: 0
+      });
+
+      const imgTranslate = gsap.to('.education-list:not(:last-child) img', {
+        y: -150,
+        stagger: .5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: '.sticky-background',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1
+        }
+      });
+
+      // Refresh ScrollTrigger on window resize
+      window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+      });
+    });
+  </script>
+</body>
+</html>
